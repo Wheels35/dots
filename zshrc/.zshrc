@@ -108,3 +108,6 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
 
 alias cat="bat"
+alias vim="nvim"
+alias vi="nvim"
+alias nv="nvim"
