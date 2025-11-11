@@ -1,0 +1,4 @@
+theme = catppuccin-mocha.conf
+font-family = FiraCode Nerd Font Mono Reg
+font-size = 16
+shell-integration-features = sudo,ssh-env
