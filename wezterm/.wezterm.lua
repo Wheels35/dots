@@ -2,16 +2,16 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- The filled in variant of the < symbol
-local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_right_half_circle_thick
 
 -- The filled in variant of the > symbol
-local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
+local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_left_half_circle_thick
 
 -- Your existing config settings
 config.color_scheme = 'Catppuccin Mocha'
 config.font_size = 16
 config.default_cursor_style = 'BlinkingBar'
--- config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
 -- This function returns the suggested title for a tab.
 -- It prefers the title that was set via `tab:set_title()`
@@ -35,16 +35,16 @@ wezterm.on(
     local scheme = wezterm.color.get_builtin_schemes()[config.color_scheme]
     
     -- Use the color scheme's tab_bar colors if available, otherwise use reasonable defaults
-    local edge_background = scheme.background or "#11111b"
-    local background = scheme.tab_bar and scheme.tab_bar.inactive_tab.bg_color or "#181825"
-    local foreground = scheme.tab_bar and scheme.tab_bar.inactive_tab.fg_color or "#cdd6f4"
+    local edge_background = scheme.background -- or "#11111b"
+    local background = scheme.tab_bar and scheme.tab_bar.inactive_tab.bg_color -- or "#181825"
+    local foreground = scheme.tab_bar and scheme.tab_bar.inactive_tab.fg_color -- or "#cdd6f4"
 
     if tab.is_active then
-      background = scheme.tab_bar and scheme.tab_bar.active_tab.bg_color or "#cba6f7"
-      foreground = scheme.tab_bar and scheme.tab_bar.active_tab.fg_color or "#11111b"
+      background = scheme.tab_bar and scheme.tab_bar.active_tab.bg_color -- or "#cba6f7"
+      foreground = scheme.tab_bar and scheme.tab_bar.active_tab.fg_color -- or "#11111b"
     elseif hover then
-      background = scheme.tab_bar and scheme.tab_bar.inactive_tab_hover.bg_color or "#1e1e2e"
-      foreground = scheme.tab_bar and scheme.tab_bar.inactive_tab_hover.fg_color or "#cdd6f4"
+      background = scheme.tab_bar and scheme.tab_bar.inactive_tab_hover.bg_color -- or "#1e1e2e"
+      foreground = scheme.tab_bar and scheme.tab_bar.inactive_tab_hover.fg_color -- or "#cdd6f4"
     end
 
     local edge_foreground = background
