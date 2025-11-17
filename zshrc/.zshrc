@@ -103,12 +103,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="$PATH:/Users/george.wielgosz/gitlabonprem/devhub/bin"
+if [ "$TERM_PROGRAM" = "vscode" ]
+then
+echo "in vscode"
+else
+fi
+eval "$(starship init zsh)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-eval "$(starship init zsh)"
+
 
 alias cat="bat"
 alias vim="nvim"
 alias vi="nvim"
 alias nv="nvim"
+alias ls="eza"
 export PATH="/opt/homebrew/bin:$PATH"
