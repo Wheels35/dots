@@ -1,8 +1,16 @@
-#######
-Dotfiles
-#######
+# Muh Dots
+
+#### Create Symlinks
+
+__stow -R */__
+
+Usingsstow with the **-R** modifier allows to to set it to traverse into subdirectors of the repo.  This will then use those as the 'top level' when placing the config files.
 
 
-deploying stowed files in folders
-This will traverse into each folder for each application and use that as the 'top' level directory instead of directly from the dotfiles repo. This allows us to organize each application into a proper folder structure.
-stow -R */
+
+#### Git commands just because i forget them
+git add .
+
+git commit -m "Message here"
+
+git push
