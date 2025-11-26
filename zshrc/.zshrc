@@ -105,7 +105,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:/Users/george.wielgosz/gitlabonprem/devhub/bin"
 if [ "$TERM_PROGRAM" = "vscode" ]
 then
-echo "in vscode"
 else
 fi
 eval "$(starship init zsh)"
@@ -119,3 +118,4 @@ alias vi="nvim"
 alias nv="nvim"
 alias ls="eza"
 export PATH="/opt/homebrew/bin:$PATH"
+DISABLE_UPDATE_PROMPT=true
