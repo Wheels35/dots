@@ -119,3 +119,4 @@ alias nv="nvim"
 alias ls="eza"
 export PATH="/opt/homebrew/bin:$PATH"
 DISABLE_UPDATE_PROMPT=true
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

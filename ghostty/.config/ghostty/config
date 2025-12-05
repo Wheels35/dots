@@ -3,3 +3,4 @@ font-family = JetBrainsMono Nerd Font Mono
 font-size = 16
 shell-integration-features = sudo,ssh-env
 keybind = shift+enter=text:\x1b\r
+window-padding-x = 5
